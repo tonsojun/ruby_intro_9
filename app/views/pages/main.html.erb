@@ -1,1 +1,19 @@
 <h1>Exercise 9</h1>
+
+<%= form_with url: "/add", method: :post do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :hobby, "Hobby" %>
+  <%= form.text_field :hobby %>
+
+  <%= form.submit "Submit" %>
+<% end %>
+
+
+<% session[:students].each do |student| %>
+  <%= student[0] %>: <%= student[1]%>
+<%end%>
+
+
+
